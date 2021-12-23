@@ -1,0 +1,17 @@
+  <center><nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: darkblue;">
+      <a class="navbar-brand" href="/">HEALTH CARE SYSTEM</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      {% if user.is_authenticated %}
+      <li><h4 style="color: white;">Hello,&nbsp;{{user.first_name}} &nbsp; </h4></li>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class ="navbar-brand" href="accounts/logout">LOGOUT </a>
+      {% else %}
+      <a class ="navbar-brand" href="accounts/register">REGISTER </a>
+      <a class ="navbar-brand" href="accounts/login">LOGIN </a>
+      {% endif %}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+</nav>
+</center>

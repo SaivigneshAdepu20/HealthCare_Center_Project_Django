@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALTH CARE</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   
+    <style>
+        .base-div{
+            position: relative;
+            top: 300px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+
+</head>
+<body class="">
+<div class="container-fluid mt-5 mx-auto" style="background-color: white;">
+    {% include "navbar.html" %}
+    {% block heading %}
+    {% endblock heading %}
+    {% if not user.is_authenticated %}
+    <div class="base-div">
+    <h1>Welcome To our Clinic</h1>
+    <h5>{{ now}}</h5>
+    </div>
+    {% endif %}
+    {% block content %}
+    {% endblock content %}
+
+</div>
+
+    
+    <script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap-icons.json' %}"></script>
+    <script src="{% static 'js/boostrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
